@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iran Tapetes Orientais</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@300;400;500;700&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#0A1622', 
+                        brandGold: '#D79A21',
+                        brandIvory: '#FFFFFF', 
+                        brandTerracotta: '#FF3131', 
+                    },
+                    fontFamily: {
+                        title: ['"Berkshire Swash"', 'serif'],
+                        body: ['Inter', 'sans-serif'],
+                        button: ['Oswald', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { 
+            background-color: #0A1622;
+            color: #FFFFFF; 
+            font-family: 'Inter', sans-serif; 
+            margin: 0;
+        }
+
+        .bg-wrapper {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+            background: radial-gradient(circle at center, #162a3d 0%, #0A1622 100%);
+        }
+
+        .bg-grid {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background-image: 
+                linear-gradient(rgba(215, 154, 33, 0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(215, 154, 33, 0.07) 1px, transparent 1px);
+            background-size: 40px 40px;
+            transform: perspective(500px) rotateX(60deg);
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: perspective(500px) rotateX(60deg) translateY(0); }
+            100% { transform: perspective(500px) rotateX(60deg) translateY(40px); }
+        }
+
+        .link-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(215, 154, 33, 0.3);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .link-card:hover {
+            border-color: #D79A21;
+            background: rgba(215, 154, 33, 0.15);
+            transform: scale(1.03);
+        }
+
+        .icon-instagram {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div class="bg-wrapper">
+        <div class="bg-grid"></div>
+    </div>
+
+    <div class="relative z-10 w-full max-w-[380px] py-8">
+        
+        <header class="flex flex-col items-center text-center w-full">
+            <div class="relative mb-6">
+                <div class="absolute inset-0 bg-brandGold blur-[40px] opacity-30"></div>
+                <img src="assets/Logo.png" alt="Iran Tapetes" class="relative w-32 h-32 rounded-full border-2 border-brandGold object-cover shadow-2xl">
+            </div>
+            
+            <h1 class="font-title text-4xl text-brandGold mb-4 drop-shadow-lg">Iran Tapetes</h1>
+
+            <div class="flex justify-center gap-8 text-3xl mb-8">
+                <a href="https://instagram.com/irantapetes.oficial" target="_blank" class="hover:scale-110 transition-transform">
+                    <i class="fa-brands fa-instagram icon-instagram"></i>
+                </a>
+                <a href="mailto:irantapetesorientais@gmail.com" class="text-white hover:text-brandGold transition-colors">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+            </div>
+        </header>
+
+        <main class="w-full space-y-4">
+            <a href="https://wa.me/5511983560203" target="_blank" class="link-card flex items-center p-5 rounded-2xl shadow-lg">
+                <div class="w-10 flex justify-center text-brandGold text-2xl">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="flex-1 text-center pr-10">
+                    <span class="font-button block text-sm uppercase tracking-widest font-semibold text-white">Atendimento Whatsapp</span>
+                </div>
+            </a>
+
+            <a href="https://www.irantapetesorientais.com.br/" target="_blank" class="link-card flex items-center p-5 rounded-2xl shadow-lg">
+                <div class="w-10 flex justify-center text-brandGold text-xl">
+                    <i class="fa-solid fa-store"></i>
+                </div>
+                <div class="flex-1 text-center pr-10">
+                    <span class="font-button block text-sm uppercase tracking-widest font-semibold text-white">Nossa Loja Online</span>
+                </div>
+            </a>
+        </main>
+
+        <section class="w-full mt-10">
+            <div class="text-center mb-6">
+                <h2 class="font-button text-lg uppercase tracking-[0.2em] text-brandGold font-medium">Visite nossa Loja Física</h2>
+                <p class="text-[11px] uppercase tracking-[0.3em] text-white/60">Jardins, São Paulo</p>
+            </div>
+
+            <div class="w-full relative rounded-3xl overflow-hidden border-2 border-brandGold/40 h-48 shadow-2xl">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1974751761623!2d-46.6644266!3d-23.5613345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59d332675f97%3A0x63346d0426b64f05!2sRua%20Augusta%2C%202396%20-%20Cerqueira%20C%C3%A9sar%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001412-000!5e0!3m2!1spt-BR!2sbr!4v1710000000000" 
+                    class="w-full h-full contrast-[1.1]" 
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+                <div class="absolute bottom-3 left-0 right-0 text-center px-4">
+                    <span class="bg-brandDark border border-brandGold px-4 py-1.5 rounded-full text-[10px] uppercase tracking-tighter text-brandGold font-bold shadow-2xl">Rua Augusta, 2396</span>
+                </div>
+            </div>
+
+            <div class="w-full mt-6 rounded-3xl p-6 bg-white/5 border border-white/10 backdrop-blur-md">
+                <h3 class="font-button text-[10px] uppercase tracking-[0.4em] text-brandGold text-center mb-5 font-bold">Horário de Funcionamento</h3>
+                <div class="space-y-3 text-[12px] font-medium tracking-widest uppercase">
+                    <div class="flex justify-between border-b border-white/10 pb-2 text-white">
+                        <span>Segunda</span> 
+                        <span>10:00 – 18:00</span>
+                    </div>
+                    <div class="flex justify-between border-b border-white/10 pb-2 text-white">
+                        <span>Terça a Sexta</span> 
+                        <span>09:00 – 18:00</span>
+                    </div>
+                    <div class="flex justify-between border-b border-white/10 pb-2 text-white">
+                        <span>Sábado</span> 
+                        <span>10:00 – 15:00</span>
+                    </div>
+                    <div class="flex justify-between pt-1 text-brandTerracotta">
+                        <span class="font-black">Domingo</span> 
+                        <span class="font-black">Fechado</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://seeb-widget.pages.dev/widget.js" defer></script>
+</body>
+</html>
